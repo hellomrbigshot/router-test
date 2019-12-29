@@ -1,5 +1,14 @@
 # router-test
 
+## description
+To show hmr bug in vue-cli
+### Step1
+Turn page to page1
+### Step2
+Change js code in [Page1.vue](./src/views/Page1.vue)
+### Step3
+You will find ***page1 does not rerender but disappear***
+
 ## Project setup
 ```
 npm install
@@ -10,20 +19,7 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
 ### Lints and fixes files
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

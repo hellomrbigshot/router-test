@@ -2,11 +2,24 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About</router-link> |
+      <router-link to="/page1">Page1</router-link> |
+      <router-link to="/page2">Page2</router-link>
     </div>
-    <router-view/>
+    <keep-alive>
+      <router-view :key="fullPath"/>
+    </keep-alive>
   </div>
 </template>
+<script>
+export default {
+  computed: {
+    fullPath () {
+      return this.$route.fullPath
+    }
+  }
+}
+</script>
 
 <style>
 #app {
